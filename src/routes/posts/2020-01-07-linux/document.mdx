@@ -1,0 +1,35 @@
+## How to copy all thee files and folders from a directory to another from the linux shell
+
+First let's create a 2 directories, each with files and directories inside them with the following set of bash commands:
+```bash
+mkdir dir1
+mkdir dir2
+#creating files inside each dir
+touch dir1/y
+touch dir2/y
+#creating directories inside each dir
+mkdir dir1/child_dir
+mkdir dir2/child_dir
+```
+
+
+**Trying the straightforward**:
+
+```bash
+cp dir1 dir2
+```
+will not work.
+
+**what you need to use is the flag -r which means recursively.**
+
+*to to copy all thee files and folders from a directory to another from the linux shell use the following:*
+
+```bash
+cp -r dir1 dir2
+```
+
+
+
+
+
+<!--**To learn how to build your own JAMStack app**, join the [React In Practice](https://frontarm.com/courses/react-in-practice/) course by [James K Nelson](https://twitter.com/james_k_nelson), where you'll build this blog from scratch.-->
