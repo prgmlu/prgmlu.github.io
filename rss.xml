@@ -4,7 +4,7 @@
         <title>Python-Linux-Javascript</title>
         <link>/</link>
         <description>Short blogs about Python, Linux, Javascript.</description>
-        <lastBuildDate>Tue, 07 Jan 2020 18:19:56 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 08 Jan 2020 19:15:40 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
@@ -26,8 +26,15 @@
 <span class="token function">mkdir</span> dir1/child_dir
 <span class="token function">mkdir</span> dir2/child_dir
 </code></pre><p><strong>Trying the straightforward</strong>:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> dir1 dir2
-</code></pre><p>will not work.</p><p><strong>what you need to use is the flag -r which means recursively.</strong></p><p><em>to to copy all thee files and folders from a directory to another from the linux shell use the following:</em></p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> -r dir1 dir2
+</code></pre><p>will not work.</p><hr/><br/><p><strong>what you need to use is the flag -r which means recursively.</strong></p><p><em>to to copy all thee files and folders from a directory to another from the linux shell use the following:</em></p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> -r dir1 dir2
 </code></pre>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to easily use ssh step by step]]></title>
+            <link>/posts/2020-01-08/ssh</link>
+            <guid>/posts/2020-01-08/ssh</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-easily-use-ssh-step-by-step">How to easily use ssh step by step</h2><p>Recently in one of my projects, I had to run an <code>EC2</code> instance on <code>AWS</code>, and I needed to connect to it.</p><p><strong>After some research here’s how I did it on ubuntu:</strong></p><ul><li>create a file named “config” inside .ssh folder in your root directory.</li><li>fill it with the equivalent information about your host.</li></ul><img src="/static/media/ssh.5502d0f2.png"/><p>After that you can connect to it with the following commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">ssh</span> instagramproject
+</code></pre><p>and you should be connected.</p>]]></content:encoded>
         </item>
     </channel>
 </rss>

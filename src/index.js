@@ -1,3 +1,6 @@
+import ReactGA from 'react-ga';
+
+
 import register from "navi-scripts/register";
 import { createBrowserNavigation } from "navi";
 import React from "react";
@@ -8,6 +11,7 @@ import "./index.module.css";
 import routes from "./routes";
 import * as serviceWorker from "./serviceWorker";
 
+ReactGA.initialize('UA-155624787-1');
 // `register()` is responsible for exporting your app's pages and App
 // component to the static renderer, and for starting the app with the
 // `main()` function when running within a browser.

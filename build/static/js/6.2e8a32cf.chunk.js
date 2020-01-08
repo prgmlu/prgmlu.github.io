@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{52:function(n,e,t){"use strict";t.r(e),e.default={title:"New blog!",tags:["blogging","programming"],spoiler:"Created a new blog.",getContent:function(){return t.e(8).then(t.bind(null,49))}}}}]);
-//# sourceMappingURL=6.2e8a32cf.chunk.js.map
