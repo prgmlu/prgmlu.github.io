@@ -20,23 +20,22 @@ Notice that it's alot of typing, is there a way to make it quicker?
 - add the following to the file:
 ```bash
 [alias]
-    cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+    acp = "!l() { git add --all && git commit -m \"commit message\" && git push -u origin master; }; l"
 
 ```
 
 
-**Before**
+**Before:**
  <img src={before}/> 
 
 
-code snippet2
-After that you can connect to it with the following commands:
-```bash
-ssh instagramproject
-```
-
-img2
+**After:**
  <img src={after}/> 
 
-video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KxSd-l-urj8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ ### And now you can call them like the following:
+ ```bash
+ git acp
+ ```
+
+**Video Tutorial**:
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=r-sGqQpUDlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

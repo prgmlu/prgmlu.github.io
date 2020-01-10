@@ -4,7 +4,7 @@
         <title>Python-Linux-Javascript</title>
         <link>/</link>
         <description>Short blogs about Python, Linux, Javascript.</description>
-        <lastBuildDate>Thu, 09 Jan 2020 21:09:21 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 Jan 2020 14:33:13 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
@@ -44,6 +44,20 @@
 </code></pre><p><strong>To remove the element “second” do the following:</strong></p><pre><code>arr.splice(1,1)
 </code></pre><p><strong>Notice the following</strong>:
 The array is modified in place.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to do git add commit and push in one command]]></title>
+            <link>/posts/2020-01-10/linux_2</link>
+            <guid>/posts/2020-01-10/linux_2</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-do-git-add-commit-and-push-in-one-command">how to do git add commit and push in one command?</h2><p>After putting your project in a remote repository, you find that you often want to push changes to that repository.
+You typically do it with these three commands:</p><p>After that you can connect to it with the following commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> <span class="token function">add</span> --all
+<span class="token function">git</span> commit -m <span class="token string">"commit message"</span>
+<span class="token function">git</span> push -u origin master
+</code></pre><p>Notice that it’s alot of typing, is there a way to make it quicker?</p><p><strong> How to do git add commit and push in one command: </strong></p><ul><li>open the file “.gitconfig” in your home directory.</li><li>add the following to the file:</li></ul><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+    acp <span class="token operator">=</span> <span class="token string">"!l() { git add --all &amp;&amp; git commit -m <span class="token entity" title="\&quot;">\"</span>commit message<span class="token entity" title="\&quot;">\"</span> &amp;&amp; git push -u origin master; }; l"</span>
+
+</code></pre><p><strong>Before:</strong></p><img src="/static/media/before.21840404.png"/><p><strong>After:</strong></p><img src="/static/media/after.4d903531.png"/><h3 id="and-now-you-can-call-them-like-the-following">And now you can call them like the following:</h3><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> acp
+</code></pre><p><strong>Video Tutorial</strong>:</p><iframe width="560" height="315" src="https://www.youtube.com/watch?v=r-sGqQpUDlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
         </item>
     </channel>
 </rss>
