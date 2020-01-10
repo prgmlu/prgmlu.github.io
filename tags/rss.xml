@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Python-Linux-Javascript</title>
+        <link>/</link>
+        <description>Short blogs about Python, Linux, Javascript.</description>
+        <lastBuildDate>Fri, 10 Jan 2020 14:33:13 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[New blog!]]></title>
+            <link>/posts/2020-01-05/welcome</link>
+            <guid>/posts/2020-01-05/welcome</guid>
+            <content:encoded><![CDATA[<h2 id="the-why">The why…</h2><p>It’s the start of a new year, and i have some knoweldge I wanna share!</p><p>You will find in this blog articles about Python, Linux, and Javascript.</p><p>I hope you and I learn something in the process.</p><p>Mostafa</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to copy or move all files and folders from linux shell]]></title>
+            <link>/posts/2020-01-07/linux</link>
+            <guid>/posts/2020-01-07/linux</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-copy-all-thee-files-and-folders-from-a-directory-to-another-from-the-linux-shell">How to copy all thee files and folders from a directory to another from the linux shell</h2><p>First let’s create a 2 directories, each with files and directories inside them with the following set of bash commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">mkdir</span> dir1
+<span class="token function">mkdir</span> dir2
+<span class="token comment">#creating files inside each dir</span>
+<span class="token function">touch</span> dir1/y
+<span class="token function">touch</span> dir2/y
+<span class="token comment">#creating directories inside each dir</span>
+<span class="token function">mkdir</span> dir1/child_dir
+<span class="token function">mkdir</span> dir2/child_dir
+</code></pre><p><strong>Trying the straightforward</strong>:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> dir1 dir2
+</code></pre><p>will not work.</p><hr/><br/><p><strong>what you need to use is the flag -r which means recursively.</strong></p><p><em>to to copy all thee files and folders from a directory to another from the linux shell use the following:</em></p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> -r dir1 dir2
+</code></pre>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to easily use ssh step by step]]></title>
+            <link>/posts/2020-01-08/ssh</link>
+            <guid>/posts/2020-01-08/ssh</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-easily-use-ssh-step-by-step">How to easily use ssh step by step</h2><p>Recently in one of my projects, I had to run an <code>EC2</code> instance on <code>AWS</code>, and I needed to connect to it.</p><p><strong>After some research here’s how I did it on ubuntu:</strong></p><ul><li>create a file named “config” inside .ssh folder in your root directory.</li><li>fill it with the equivalent information about your host.</li></ul><img src="/static/media/ssh.5502d0f2.png"/><p>After that you can connect to it with the following commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">ssh</span> instagramproject
+</code></pre><p>and you should be connected.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to remove an element from a javascript array]]></title>
+            <link>/posts/2020-01-09/javascript</link>
+            <guid>/posts/2020-01-09/javascript</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-remove-an-element-from-javascript-array">How to remove an element from Javascript Array</h2><p><strong>Let’s say you have an array like the following:</strong></p><pre><code class="language-Javascript" data-language="Javascript" data-highlighted-line-numbers="">var arr = [&#39;first&#39;,&#39;second&#39;,&#39;third&#39;,&#39;fourth&#39;]
+</code></pre><p><strong>To remove the element “second” do the following:</strong></p><pre><code>arr.splice(1,1)
+</code></pre><p><strong>Notice the following</strong>:
+The array is modified in place.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to do git add commit and push in one command]]></title>
+            <link>/posts/2020-01-10/linux_2</link>
+            <guid>/posts/2020-01-10/linux_2</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-do-git-add-commit-and-push-in-one-command">how to do git add commit and push in one command?</h2><p>After putting your project in a remote repository, you find that you often want to push changes to that repository.
+You typically do it with these three commands:</p><p>After that you can connect to it with the following commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> <span class="token function">add</span> --all
+<span class="token function">git</span> commit -m <span class="token string">"commit message"</span>
+<span class="token function">git</span> push -u origin master
+</code></pre><p>Notice that it’s alot of typing, is there a way to make it quicker?</p><p><strong> How to do git add commit and push in one command: </strong></p><ul><li>open the file “.gitconfig” in your home directory.</li><li>add the following to the file:</li></ul><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+    acp <span class="token operator">=</span> <span class="token string">"!l() { git add --all &amp;&amp; git commit -m <span class="token entity" title="\&quot;">\"</span>commit message<span class="token entity" title="\&quot;">\"</span> &amp;&amp; git push -u origin master; }; l"</span>
+
+</code></pre><p><strong>Before:</strong></p><img src="/static/media/before.21840404.png"/><p><strong>After:</strong></p><img src="/static/media/after.4d903531.png"/><h3 id="and-now-you-can-call-them-like-the-following">And now you can call them like the following:</h3><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> acp
+</code></pre><p><strong>Video Tutorial</strong>:</p><iframe width="560" height="315" src="https://www.youtube.com/watch?v=r-sGqQpUDlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
