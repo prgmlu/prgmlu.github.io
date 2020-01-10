@@ -4,7 +4,7 @@
         <title>Python-Linux-Javascript</title>
         <link>/</link>
         <description>Short blogs about Python, Linux, Javascript.</description>
-        <lastBuildDate>Fri, 10 Jan 2020 17:30:41 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 Jan 2020 17:34:36 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
@@ -49,7 +49,7 @@ The array is modified in place.</p>]]></content:encoded>
             <title><![CDATA[How to do git add commit and push in one command]]></title>
             <link>/posts/2020-01-10/linux_2</link>
             <guid>/posts/2020-01-10/linux_2</guid>
-            <content:encoded><![CDATA[<p>#SHITCOCK</p><h2 id="how-to-do-git-add-commit-and-push-in-one-command">how to do git add commit and push in one command?</h2><p>After putting your project in a remote repository, you find that you often want to push changes to that repository.
+            <content:encoded><![CDATA[<h2 id="how-to-do-git-add-commit-and-push-in-one-command">how to do git add commit and push in one command?</h2><p>After putting your project in a remote repository, you find that you often want to push changes to that repository.
 You typically do it with these three commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> <span class="token function">add</span> --all
 <span class="token function">git</span> commit -m <span class="token string">"commit message"</span>
 <span class="token function">git</span> push -u origin master
