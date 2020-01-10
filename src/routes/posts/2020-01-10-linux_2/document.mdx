@@ -1,0 +1,42 @@
+import before from './before.png'
+import after from './after.png'
+
+## how to do git add commit and push in one command?
+
+After putting your project in a remote repository, you find that you often want to push changes to that repository.
+You typically do it with these three commands:
+
+After that you can connect to it with the following commands:
+```bash
+git add --all
+git commit -m "commit message"
+git push -u origin master
+```
+
+Notice that it's alot of typing, is there a way to make it quicker?
+
+** How to do git add commit and push in one command: **
+- open the file '.gitconfig' in your home directory.
+- add the following to the file:
+```bash
+[alias]
+    cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+
+```
+
+
+**Before**
+ <img src={before}/> 
+
+
+code snippet2
+After that you can connect to it with the following commands:
+```bash
+ssh instagramproject
+```
+
+img2
+ <img src={after}/> 
+
+video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KxSd-l-urj8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
