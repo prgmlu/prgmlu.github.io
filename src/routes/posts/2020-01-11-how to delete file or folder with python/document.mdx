@@ -1,0 +1,44 @@
+import error from './error.png'
+import noerror from './noerror.png'
+
+## how to delete a file or folder with python
+
+We'll first try using the os module:
+```python
+import os
+open('example.txt','w').write('')
+os.remove('example.txt')
+```
+it works with files.
+
+let's try it with an empty directory
+
+let's first create an empty directory:
+```python
+os.mkdir('empty_dir')
+os.remove('empty_dir')
+```
+It gives an error this time.
+ <img src={error}/> 
+
+we'll need another module for this task.
+we'll use the shutil module.
+
+```python
+import shutil
+shutil.rmtree('empty_dir')
+```
+
+This time it works, and no error.
+<img src={noerror} />
+
+It even works with non-empty directories:
+```python
+os.mkdir('non_empty')
+open('non_empty/example.txt','w').write('')
+shutil.rmtree('non_empty')
+
+```
+
+A video Tutorial:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AoOIYJDfjh8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

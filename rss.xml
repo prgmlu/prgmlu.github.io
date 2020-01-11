@@ -4,7 +4,7 @@
         <title>Python-Linux-Javascript</title>
         <link>/</link>
         <description>Short blogs about Python, Linux, Javascript.</description>
-        <lastBuildDate>Fri, 10 Jan 2020 17:34:36 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 11 Jan 2020 20:30:44 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
@@ -58,6 +58,24 @@ You typically do it with these three commands:</p><pre><code class="language-bas
 
 </code></pre><p><strong>Before:</strong></p><img src="/static/media/before.21840404.png"/><p><strong>After:</strong></p><img src="/static/media/after.4d903531.png"/><h3 id="and-now-you-can-call-them-like-the-following">And now you can call them like the following:</h3><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> acp
 </code></pre><p><strong>Video Tutorial</strong>:</p><iframe width="560" height="315" src="https://www.youtube.com/embed/r-sGqQpUDlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[how to delete a file or folder with python]]></title>
+            <link>/posts/2020-01-11/how-to-delete-file-or-folder-with-python</link>
+            <guid>/posts/2020-01-11/how-to-delete-file-or-folder-with-python</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-delete-a-file-or-folder-with-python">how to delete a file or folder with python</h2><p>We’ll first try using the os module:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers=""><span class="token keyword">import</span> os
+<span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'example.txt'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'example.txt'</span><span class="token punctuation">)</span>
+</code></pre><p>it works with files.</p><p>let’s try it with an empty directory</p><p>let’s first create an empty directory:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers="">os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'empty_dir'</span><span class="token punctuation">)</span>
+os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'empty_dir'</span><span class="token punctuation">)</span>
+</code></pre><p>It gives an error this time.</p><img src="/static/media/error.3c67ed44.png"/><p>we’ll need another module for this task.
+we’ll use the shutil module.</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers=""><span class="token keyword">import</span> shutil
+shutil<span class="token punctuation">.</span>rmtree<span class="token punctuation">(</span><span class="token string">'empty_dir'</span><span class="token punctuation">)</span>
+</code></pre><p>This time it works, and no error.</p><img src="/static/media/noerror.e6085057.png"/><p>It even works with non-empty directories:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers="">os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'non_empty'</span><span class="token punctuation">)</span>
+<span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'non_empty/example.txt'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+shutil<span class="token punctuation">.</span>rmtree<span class="token punctuation">(</span><span class="token string">'non_empty'</span><span class="token punctuation">)</span>
+
+</code></pre><p>A video Tutorial:</p><iframe width="560" height="315" src="https://www.youtube.com/embed/AoOIYJDfjh8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
         </item>
     </channel>
 </rss>
