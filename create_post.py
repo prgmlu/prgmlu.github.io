@@ -32,4 +32,4 @@ document_text = document_text.replace('How to easily use ssh step by step',sys.a
 open('src/routes/posts/{}/document.mdx'.format(title),'w').write(document_text)
 
 
-os.system('code src/routes/posts/{}/'.format(title))
+os.system('code src/routes/posts/"{}"/'.format(title))

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{65:function(e,n,t){"use strict";t.r(n),n.default={title:"How to remove an element from a javascript array",tags:["javascript"],spoiler:"removing an element from javascript array.",getContent:function(){return t.e(17).then(t.bind(null,54))}}}}]);
-//# sourceMappingURL=12.d27bc7fc.chunk.js.map

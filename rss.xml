@@ -4,7 +4,7 @@
         <title>Python-Linux-Javascript</title>
         <link>/</link>
         <description>Short blogs about Python, Linux, Javascript.</description>
-        <lastBuildDate>Sat, 11 Jan 2020 20:30:44 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 12 Jan 2020 09:54:34 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
@@ -76,6 +76,27 @@ shutil<span class="token punctuation">.</span>rmtree<span class="token punctuati
 shutil<span class="token punctuation">.</span>rmtree<span class="token punctuation">(</span><span class="token string">'non_empty'</span><span class="token punctuation">)</span>
 
 </code></pre><p>A video Tutorial:</p><iframe width="560" height="315" src="https://www.youtube.com/embed/AoOIYJDfjh8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[how to round to two decimal places in javascript]]></title>
+            <link>/posts/2020-01-12/how-to-round-to-two-decimal-places-in-javascript</link>
+            <guid>/posts/2020-01-12/how-to-round-to-two-decimal-places-in-javascript</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-round-to-two-decimal-places-in-javascript">how to round to two decimal places in javascript</h2><p>Let’s say you have some numbers like the following:</p><pre><code class="language-javascript" data-language="javascript" data-highlighted-line-numbers="">a <span class="token operator">=</span> <span class="token number">23.3251</span>
+b <span class="token operator">=</span> <span class="token number">1393.3</span>
+c <span class="token operator">=</span> <span class="token number">2334.300251</span>
+</code></pre><p>and you want to be consistent so you want to round to 2 decimal places, you want them to be like the following:</p><pre><code class="language-javascript" data-language="javascript" data-highlighted-line-numbers="">a <span class="token operator">=</span> <span class="token number">23.33</span>
+b <span class="token operator">=</span> <span class="token number">1393.30</span>
+c <span class="token operator">=</span> <span class="token number">2334.30</span>
+</code></pre><p><strong>how to do it with javascript?</strong>
+The way to do it is with the function <code>toFixed()</code></p><pre><code class="language-javascript" data-language="javascript" data-highlighted-line-numbers="">a <span class="token operator">=</span> <span class="token number">23.3251</span>
+b <span class="token operator">=</span> <span class="token number">1393.3</span>
+c <span class="token operator">=</span> <span class="token number">2334.300251</span>
+
+a <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> b<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+c <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+</code></pre>]]></content:encoded>
         </item>
     </channel>
 </rss>

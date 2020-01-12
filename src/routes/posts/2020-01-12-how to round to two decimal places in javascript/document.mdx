@@ -1,0 +1,30 @@
+
+## how to round to two decimal places in javascript
+
+Let's say you have some numbers like the following:
+```javascript
+a = 23.3251
+b = 1393.3
+c = 2334.300251
+```
+
+and you want to be consistent so you want to round to 2 decimal places, you want them to be like the following:
+```javascript
+a = 23.33
+b = 1393.30
+c = 2334.30
+```
+
+**how to do it with javascript?**
+The way to do it is with the function `toFixed()`
+
+```javascript
+a = 23.3251
+b = 1393.3
+c = 2334.300251
+
+a = a.toFixed(2)
+b = b.toFixed(2)
+c = c.toFixed(2)
+
+```
