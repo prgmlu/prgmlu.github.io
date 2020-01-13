@@ -1,0 +1,71 @@
+import chrome_version from './chrome_version.png'
+import chrome_window from './chrome_window.png'
+
+# How to do webscraping with selenium python
+
+Hello everyone, in this series of tutorials, we're going to cover how to use selenium with python to do advanced webscraping.
+I'll walk you through everything from setting it up, until deploying your scrapers on a remote host.
+
+First what is webscraping?
+
+> Web scraping, is the process of collecting data that's freely available from the internet.
+
+What are the tools used to do web scraping?
+The following are some of the tools inside the python ecosystem:
+- Beautifulsoup
+- Scrapy
+- Requests
+- Selenium
+
+We'll focus on selenium in this series of posts.
+
+***
+
+## Setting up the environment
+*for this tutorial we'll use google chrome, if you don't have it please install it from the following link:*
+[Google Chrome](https://www.google.com/chrome/)
+
+
+First you'll need to know which version of chrome you're using.
+to know which version you need to go there in your chrome:
+> chrome://settings/help
+
+**After you open your link you will see the version of your chrome:**
+
+<img src={chrome_version}/>
+
+For example, that previous image is from my system, and it clearly says that my chrome version is 68.0.03440 64-bit.
+### The next step is to download the appropriate version from this link:
+
+[chromedriver](https://chromedriver.chromium.org/downloads)
+
+After downloading, you'll need to extract the executable file and keep it on the Desktop for example.
+
+Please note that you can use other browsers than chrome, but the steps are similar.
+
+### Next step is to install selenium library.
+*I assume you have python 3+ installed, if you don't have it, please install it from the following link:*
+
+[Python](https://www.python.org/downloads/)
+
+To install selenium we'll use [pip](https://pypi.org/project/pip/)
+
+```bash
+pip install selenium
+```
+
+*To make sure everything is set up correctly we'll open python and import selenium and run the webdriver*:
+```python
+import selenium
+import selenium.webdriver as webdriver
+
+driver = webdriver.Chrome(executable_path = PATH_TO_CHROME_DRIVER)
+```
+and make sure to replace PATH_TO_CHROME_DRIVER with where your extracted chrome driver is.
+
+After that you should see a Chrome window opened:
+<img src={chrome_window}/>
+
+## Conclusion
+We've setup the environment, by downloading the chromedriver and the selenium library.
+In the following posts We'll start opening some sites and extracting data with python and selenium.

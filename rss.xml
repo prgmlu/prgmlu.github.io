@@ -4,7 +4,7 @@
         <title>Python-Linux-Javascript</title>
         <link>/</link>
         <description>Short blogs about Python, Linux, Javascript.</description>
-        <lastBuildDate>Sun, 12 Jan 2020 09:54:34 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 13 Jan 2020 16:27:02 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
@@ -97,6 +97,22 @@ b <span class="token operator">=</span> b<span class="token punctuation">.</span
 c <span class="token operator">=</span> c<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
 
 </code></pre>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to do webscraping with python selenium]]></title>
+            <link>/posts/2020-01-13/how-to-do-webscraping-with-selenium-python</link>
+            <guid>/posts/2020-01-13/how-to-do-webscraping-with-selenium-python</guid>
+            <content:encoded><![CDATA[<h1 id="how-to-do-webscraping-with-selenium-python">How to do webscraping with selenium python</h1><p>Hello everyone, in this series of tutorials, we’re going to cover how to use selenium with python to do advanced webscraping.
+I’ll walk you through everything from setting it up, until deploying your scrapers on a remote host.</p><p>First what is webscraping?</p><blockquote><p>Web scraping, is the process of collecting data that’s freely available from the internet.</p></blockquote><p>What are the tools used to do web scraping?
+The following are some of the tools inside the python ecosystem:</p><ul><li>Beautifulsoup</li><li>Scrapy</li><li>Requests</li><li>Selenium</li></ul><p>We’ll focus on selenium in this series of posts.</p><hr/><h2 id="setting-up-the-environment">Setting up the environment</h2><p><em>for this tutorial we’ll use google chrome, if you don’t have it please install it from the following link:</em>
+<a href="https://www.google.com/chrome/">Google Chrome</a></p><p>First you’ll need to know which version of chrome you’re using.
+to know which version you need to go there in your chrome:</p><blockquote><p>chrome://settings/help</p></blockquote><p><strong>After you open your link you will see the version of your chrome:</strong></p><img src="/static/media/chrome_version.e40cdfd9.png"/><p>For example, that previous image is from my system, and it clearly says that my chrome version is 68.0.03440 64-bit.</p><h3 id="the-next-step-is-to-download-the-appropriate-version-from-this-link">The next step is to download the appropriate version from this link:</h3><p><a href="https://chromedriver.chromium.org/downloads">chromedriver</a></p><p>After downloading, you’ll need to extract the executable file and keep it on the Desktop for example.</p><p>Please note that you can use other browsers than chrome, but the steps are similar.</p><h3 id="next-step-is-to-install-selenium-library">Next step is to install selenium library.</h3><p><em>I assume you have python 3+ installed, if you don’t have it, please install it from the following link:</em></p><p><a href="https://www.python.org/downloads/">Python</a></p><p>To install selenium we’ll use <a href="https://pypi.org/project/pip/">pip</a></p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers="">pip <span class="token function">install</span> selenium
+</code></pre><p><em>To make sure everything is set up correctly we’ll open python and import selenium and run the webdriver</em>:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers=""><span class="token keyword">import</span> selenium
+<span class="token keyword">import</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">as</span> webdriver
+
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path <span class="token operator">=</span> PATH_TO_CHROME_DRIVER<span class="token punctuation">)</span>
+</code></pre><p>and make sure to replace PATH_TO_CHROME_DRIVER with where your extracted chrome driver is.</p><p>After that you should see a Chrome window opened:</p><img src="/static/media/chrome_window.1361fb58.png"/><h2 id="conclusion">Conclusion</h2><p>We’ve setup the environment, by downloading the chromedriver and the selenium library.
+In the following posts We’ll start opening some sites and extracting data with python and selenium.</p>]]></content:encoded>
         </item>
     </channel>
 </rss>

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{72:function(t,n,e){"use strict";e.r(n),n.default={title:"how to round to two decimal places in javascript",tags:["javascript","toFixed"],spoiler:"using toFixed.",getContent:function(){return e.e(21).then(e.bind(null,61))}}}}]);
+//# sourceMappingURL=16.766cd260.chunk.js.map
