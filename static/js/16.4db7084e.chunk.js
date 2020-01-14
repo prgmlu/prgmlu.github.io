@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{80:function(e,t,n){"use strict";n.r(t),t.default={title:"how to delete a file or folder with python",tags:["python","shell"],spoiler:"using the os module.",getContent:function(){return n.e(7).then(n.bind(null,62))}}}}]);
+//# sourceMappingURL=16.4db7084e.chunk.js.map

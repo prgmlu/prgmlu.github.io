@@ -32,13 +32,16 @@ let chunkPagePairs = chunks.map((chunk, i) => [
     // Get metadata for all pages on this page
     let postRoutes = await Promise.all(
       chunk.map(async post => {
-        let href = join(context.blogRoot, 'posts', post.slug)
+        // alert(post.slug)
+        let href = join(context.blogRoot, 'posts', post.slug.split('/')[1])
+        
+        // let href = join(context.blogRoot, post.slug)
         return await resolve({
           // If you want to show the page content on the index page, set
           // this to 'GET' to be able to access it.
           method: 'HEAD',
           routes,
-          url: href,
+        url: href,
         })
       }),
     )
@@ -94,12 +97,14 @@ const routes = compose(
       withView((req, context) => (
         <BlogPostLayout blogRoot={context.blogRoot} />
       )),
-      mount(fromPairs(posts.map(post => ['/' + post.slug, post.getPage]))),
+      mount(fromPairs(posts.map(post => ['/' + post.slug.split('/')[1], post.getPage]))),
     ),
 
     // Miscellaneous pages can be added directly to the root switch.
     '/tags': lazy(() => import('./tags')),
     '/about': lazy(() => import('./about')),
+    '/test': lazy(() => import('./test')),
+    
 
     // Only the statically built copy of the RSS feed is intended to be opened,
     // but the route is defined here so that the static renderer will pick it

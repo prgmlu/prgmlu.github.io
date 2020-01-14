@@ -4,65 +4,13 @@
         <title>Python-Linux-Javascript</title>
         <link>/</link>
         <description>Short blogs about Python, Linux, Javascript.</description>
-        <lastBuildDate>Mon, 13 Jan 2020 16:27:02 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Jan 2020 23:47:41 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[New blog!]]></title>
-            <link>/posts/2020-01-05/welcome</link>
-            <guid>/posts/2020-01-05/welcome</guid>
-            <content:encoded><![CDATA[<h2 id="the-why">The why…</h2><p>It’s the start of a new year, and i have some knoweldge I wanna share!</p><p>You will find in this blog articles about Python, Linux, and Javascript.</p><p>I hope you and I learn something in the process.</p><p>Mostafa</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[How to copy or move all files and folders from linux shell]]></title>
-            <link>/posts/2020-01-07/linux</link>
-            <guid>/posts/2020-01-07/linux</guid>
-            <content:encoded><![CDATA[<h2 id="how-to-copy-all-thee-files-and-folders-from-a-directory-to-another-from-the-linux-shell">How to copy all thee files and folders from a directory to another from the linux shell</h2><p>First let’s create a 2 directories, each with files and directories inside them with the following set of bash commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">mkdir</span> dir1
-<span class="token function">mkdir</span> dir2
-<span class="token comment">#creating files inside each dir</span>
-<span class="token function">touch</span> dir1/y
-<span class="token function">touch</span> dir2/y
-<span class="token comment">#creating directories inside each dir</span>
-<span class="token function">mkdir</span> dir1/child_dir
-<span class="token function">mkdir</span> dir2/child_dir
-</code></pre><p><strong>Trying the straightforward</strong>:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> dir1 dir2
-</code></pre><p>will not work.</p><hr/><br/><p><strong>what you need to use is the flag -r which means recursively.</strong></p><p><em>to to copy all thee files and folders from a directory to another from the linux shell use the following:</em></p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> -r dir1 dir2
-</code></pre>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[How to easily use ssh step by step]]></title>
-            <link>/posts/2020-01-08/ssh</link>
-            <guid>/posts/2020-01-08/ssh</guid>
-            <content:encoded><![CDATA[<h2 id="how-to-easily-use-ssh-step-by-step">How to easily use ssh step by step</h2><p>Recently in one of my projects, I had to run an <code>EC2</code> instance on <code>AWS</code>, and I needed to connect to it.</p><p><strong>After some research here’s how I did it on ubuntu:</strong></p><ul><li>create a file named “config” inside .ssh folder in your root directory.</li><li>fill it with the equivalent information about your host.</li></ul><img src="/static/media/ssh.5502d0f2.png"/><p>After that you can connect to it with the following commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">ssh</span> instagramproject
-</code></pre><p>and you should be connected.</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[How to remove an element from a javascript array]]></title>
-            <link>/posts/2020-01-09/javascript</link>
-            <guid>/posts/2020-01-09/javascript</guid>
-            <content:encoded><![CDATA[<h2 id="how-to-remove-an-element-from-javascript-array">How to remove an element from Javascript Array</h2><p><strong>Let’s say you have an array like the following:</strong></p><pre><code class="language-Javascript" data-language="Javascript" data-highlighted-line-numbers="">var arr = [&#39;first&#39;,&#39;second&#39;,&#39;third&#39;,&#39;fourth&#39;]
-</code></pre><p><strong>To remove the element “second” do the following:</strong></p><pre><code>arr.splice(1,1)
-</code></pre><p><strong>Notice the following</strong>:
-The array is modified in place.</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[How to do git add commit and push in one command]]></title>
-            <link>/posts/2020-01-10/linux_2</link>
-            <guid>/posts/2020-01-10/linux_2</guid>
-            <content:encoded><![CDATA[<h2 id="how-to-do-git-add-commit-and-push-in-one-command">how to do git add commit and push in one command?</h2><p>After putting your project in a remote repository, you find that you often want to push changes to that repository.
-You typically do it with these three commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> <span class="token function">add</span> --all
-<span class="token function">git</span> commit -m <span class="token string">"commit message"</span>
-<span class="token function">git</span> push -u origin master
-</code></pre><p>Notice that it’s alot of typing, is there a way to make it quicker?</p><p><strong> How to do git add commit and push in one command: </strong></p><ul><li>open the file “.gitconfig” in your home directory.</li><li>add the following to the file:</li></ul><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
-    acp <span class="token operator">=</span> <span class="token string">"!l() { git add --all &amp;&amp; git commit -m <span class="token entity" title="\&quot;">\"</span>commit message<span class="token entity" title="\&quot;">\"</span> &amp;&amp; git push -u origin master; }; l"</span>
-
-</code></pre><p><strong>Before:</strong></p><img src="/static/media/before.21840404.png"/><p><strong>After:</strong></p><img src="/static/media/after.4d903531.png"/><h3 id="and-now-you-can-call-them-like-the-following">And now you can call them like the following:</h3><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> acp
-</code></pre><p><strong>Video Tutorial</strong>:</p><iframe width="560" height="315" src="https://www.youtube.com/embed/r-sGqQpUDlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[how to delete a file or folder with python]]></title>
-            <link>/posts/2020-01-11/how-to-delete-file-or-folder-with-python</link>
-            <guid>/posts/2020-01-11/how-to-delete-file-or-folder-with-python</guid>
+            <link>/posts/how-to-delete-file-or-folder-with-python</link>
+            <guid>/posts/how-to-delete-file-or-folder-with-python</guid>
             <content:encoded><![CDATA[<h2 id="how-to-delete-a-file-or-folder-with-python">how to delete a file or folder with python</h2><p>We’ll first try using the os module:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers=""><span class="token keyword">import</span> os
 <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'example.txt'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
 os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'example.txt'</span><span class="token punctuation">)</span>
@@ -78,9 +26,49 @@ shutil<span class="token punctuation">.</span>rmtree<span class="token punctuati
 </code></pre><p>A video Tutorial:</p><iframe width="560" height="315" src="https://www.youtube.com/embed/AoOIYJDfjh8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[How to do webscraping with python selenium pt2]]></title>
+            <link>/posts/how-to-do-webscraping-with-python-selenium-pt2</link>
+            <guid>/posts/how-to-do-webscraping-with-python-selenium-pt2</guid>
+            <content:encoded><![CDATA[<h1 id="how-to-do-webscraping-with-python-selenium-pt2">How to do webscraping with python selenium pt2</h1><h2 id="scraping-is-an-easier-form-of-programming">Scraping is an easier form of programming:</h2><p>In normal programming tasks, you have an end goal you want to achieve and you build a logical flow
+that would achieve that end goal.
+For example you have a button that you want to trigger some action when it’s clicked, and you have to
+thread your way through the language api, and use the language’s constructs to make that happen.</p><p><em>In scraping however it’s slightly easier.</em></p><p>A big part of scraping is targeting selectors, and this process if somewhat mechanical, and we’ll encounter it
+as soon as we start web scraping.</p><h2 id="recap-from-last-post">Recap from last post:</h2><p>continuing from the last <a href="http://prgmlu.github.io/posts/2020-01-13/how-to-do-webscraping-with-selenium-python">post</a>
+we setup the environment to be able to run <a href="https://selenium-python.readthedocs.io/">selenium with python binding</a></p><p>this time we’ll see how we can automate the process of logging into instagram with selenium.</p><h2 id="opening-a-page-with-selenium">Opening a page with selenium</h2><p>the following python lines opens the login page of instagram:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">import</span> selenium.webdriver as webdriver
+driver <span class="token operator">=</span> webdriver.Chrome<span class="token punctuation">(</span>executable_path <span class="token operator">=</span> PATH_TO_YOUR_CHROMEDRIVER<span class="token punctuation">)</span>
+driver.get<span class="token punctuation">(</span><span class="token string">'https://www.instagram.com/accounts/login/'</span><span class="token punctuation">)</span>
+</code></pre><p>After running the previous commands, chromedriver should open the login page to instagram.</p><img src="/static/media/instagram_login.04a46321.png"/><h2 id="targeting-the-selectors">Targeting the selectors</h2><p>Next step is to target the username and password inputs to input the login info.
+how to go about that?</p><p>We have to remember that everything we see on the page is an <code>HTML</code> Element.
+we can inspect the element we want to target by opening <code>Chrome Dev Tools</code> by Clicking F12.</p><p>and this View should then open:</p><img src="/static/media/dev_tools.60002a51.png"/><p><strong>The previous window we just opened is very important, and you should get comfortable using it.</strong></p><p>things we can do from this window is things like: copy the CSS selector, copy the xpath of the element and much more.</p><p>Now to remind ourselves the end goal is to send our id and password from python to the input fields in the chromedriver.
+to achieve that with following code:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers=""><span class="token keyword">import</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">as</span> webdriver
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path <span class="token operator">=</span> PATH_TO_YOUR_CHROMEDRIVER<span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://www.instagram.com/accounts/login/'</span><span class="token punctuation">)</span>
+all_input_elements <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_elements_by_css_selector<span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span>
+all_input_elements<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">'USERNAME'</span><span class="token punctuation">)</span>
+all_input_elements<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">'PASSWORD'</span><span class="token punctuation">)</span>
+</code></pre><p>that’s great progress so far! we’ve managed to control a browser through python, and we almost logged into instagram.
+what remains is clicking the highlighted button in the next image, and that’s what we’ll do in the next part of this series.</p><img src="/static/media/login_button.a4091ea4.png"/><p><em>Stay Tuned…</em></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to do webscraping with python selenium]]></title>
+            <link>/posts/how-to-do-webscraping-with-selenium-python</link>
+            <guid>/posts/how-to-do-webscraping-with-selenium-python</guid>
+            <content:encoded><![CDATA[<h1 id="how-to-do-webscraping-with-selenium-python">How to do webscraping with selenium python</h1><p>Hello everyone, in this series of tutorials, we’re going to cover how to use selenium with python to do advanced webscraping.
+I’ll walk you through everything from setting it up, until deploying your scrapers on a remote host.</p><p>First what is webscraping?</p><blockquote><p>Web scraping, is the process of collecting data that’s freely available from the internet.</p></blockquote><p>What are the tools used to do web scraping?
+The following are some of the tools inside the python ecosystem:</p><ul><li>Beautifulsoup</li><li>Scrapy</li><li>Requests</li><li>Selenium</li></ul><p>We’ll focus on selenium in this series of posts.</p><hr/><h2 id="setting-up-the-environment">Setting up the environment</h2><p><em>for this tutorial we’ll use google chrome, if you don’t have it please install it from the following link:</em>
+<a href="https://www.google.com/chrome/">Google Chrome</a></p><p>First you’ll need to know which version of chrome you’re using.
+to know which version you need to go there in your chrome:</p><blockquote><p>chrome://settings/help</p></blockquote><p><strong>After you open your link you will see the version of your chrome:</strong></p><img src="/static/media/chrome_version.e40cdfd9.png"/><p>For example, that previous image is from my system, and it clearly says that my chrome version is 68.0.03440 64-bit.</p><h3 id="the-next-step-is-to-download-the-appropriate-version-from-this-link">The next step is to download the appropriate version from this link:</h3><p><a href="https://chromedriver.chromium.org/downloads">chromedriver</a></p><p>After downloading, you’ll need to extract the executable file and keep it on the Desktop for example.</p><p>Please note that you can use other browsers than chrome, but the steps are similar.</p><h3 id="next-step-is-to-install-selenium-library">Next step is to install selenium library.</h3><p><em>I assume you have python 3+ installed, if you don’t have it, please install it from the following link:</em></p><p><a href="https://www.python.org/downloads/">Python</a></p><p>To install selenium we’ll use <a href="https://pypi.org/project/pip/">pip</a></p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers="">pip <span class="token function">install</span> selenium
+</code></pre><p><em>To make sure everything is set up correctly we’ll open python and import selenium and run the webdriver</em>:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers=""><span class="token keyword">import</span> selenium
+<span class="token keyword">import</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">as</span> webdriver
+
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path <span class="token operator">=</span> PATH_TO_CHROME_DRIVER<span class="token punctuation">)</span>
+</code></pre><p>and make sure to replace PATH_TO_CHROME_DRIVER with where your extracted chrome driver is.</p><p>After that you should see a Chrome window opened:</p><img src="/static/media/chrome_window.1361fb58.png"/><h2 id="conclusion">Conclusion</h2><p>We’ve setup the environment, by downloading the chromedriver and the selenium library.
+In the following posts We’ll start opening some sites and extracting data with python and selenium.</p>]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[how to round to two decimal places in javascript]]></title>
-            <link>/posts/2020-01-12/how-to-round-to-two-decimal-places-in-javascript</link>
-            <guid>/posts/2020-01-12/how-to-round-to-two-decimal-places-in-javascript</guid>
+            <link>/posts/how-to-round-to-two-decimal-places-in-javascript</link>
+            <guid>/posts/how-to-round-to-two-decimal-places-in-javascript</guid>
             <content:encoded><![CDATA[<h2 id="how-to-round-to-two-decimal-places-in-javascript">how to round to two decimal places in javascript</h2><p>Let’s say you have some numbers like the following:</p><pre><code class="language-javascript" data-language="javascript" data-highlighted-line-numbers="">a <span class="token operator">=</span> <span class="token number">23.3251</span>
 b <span class="token operator">=</span> <span class="token number">1393.3</span>
 c <span class="token operator">=</span> <span class="token number">2334.300251</span>
@@ -99,20 +87,56 @@ c <span class="token operator">=</span> c<span class="token punctuation">.</span
 </code></pre>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[How to do webscraping with python selenium]]></title>
-            <link>/posts/2020-01-13/how-to-do-webscraping-with-selenium-python</link>
-            <guid>/posts/2020-01-13/how-to-do-webscraping-with-selenium-python</guid>
-            <content:encoded><![CDATA[<h1 id="how-to-do-webscraping-with-selenium-python">How to do webscraping with selenium python</h1><p>Hello everyone, in this series of tutorials, we’re going to cover how to use selenium with python to do advanced webscraping.
-I’ll walk you through everything from setting it up, until deploying your scrapers on a remote host.</p><p>First what is webscraping?</p><blockquote><p>Web scraping, is the process of collecting data that’s freely available from the internet.</p></blockquote><p>What are the tools used to do web scraping?
-The following are some of the tools inside the python ecosystem:</p><ul><li>Beautifulsoup</li><li>Scrapy</li><li>Requests</li><li>Selenium</li></ul><p>We’ll focus on selenium in this series of posts.</p><hr/><h2 id="setting-up-the-environment">Setting up the environment</h2><p><em>for this tutorial we’ll use google chrome, if you don’t have it please install it from the following link:</em>
-<a href="https://www.google.com/chrome/">Google Chrome</a></p><p>First you’ll need to know which version of chrome you’re using.
-to know which version you need to go there in your chrome:</p><blockquote><p>chrome://settings/help</p></blockquote><p><strong>After you open your link you will see the version of your chrome:</strong></p><img src="/static/media/chrome_version.e40cdfd9.png"/><p>For example, that previous image is from my system, and it clearly says that my chrome version is 68.0.03440 64-bit.</p><h3 id="the-next-step-is-to-download-the-appropriate-version-from-this-link">The next step is to download the appropriate version from this link:</h3><p><a href="https://chromedriver.chromium.org/downloads">chromedriver</a></p><p>After downloading, you’ll need to extract the executable file and keep it on the Desktop for example.</p><p>Please note that you can use other browsers than chrome, but the steps are similar.</p><h3 id="next-step-is-to-install-selenium-library">Next step is to install selenium library.</h3><p><em>I assume you have python 3+ installed, if you don’t have it, please install it from the following link:</em></p><p><a href="https://www.python.org/downloads/">Python</a></p><p>To install selenium we’ll use <a href="https://pypi.org/project/pip/">pip</a></p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers="">pip <span class="token function">install</span> selenium
-</code></pre><p><em>To make sure everything is set up correctly we’ll open python and import selenium and run the webdriver</em>:</p><pre><code class="language-python" data-language="python" data-highlighted-line-numbers=""><span class="token keyword">import</span> selenium
-<span class="token keyword">import</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">as</span> webdriver
+            <title><![CDATA[How to remove an element from a javascript array]]></title>
+            <link>/posts/javascript</link>
+            <guid>/posts/javascript</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-remove-an-element-from-javascript-array">How to remove an element from Javascript Array</h2><p><strong>Let’s say you have an array like the following:</strong></p><pre><code class="language-Javascript" data-language="Javascript" data-highlighted-line-numbers="">var arr = [&#39;first&#39;,&#39;second&#39;,&#39;third&#39;,&#39;fourth&#39;]
+</code></pre><p><strong>To remove the element “second” do the following:</strong></p><pre><code>arr.splice(1,1)
+</code></pre><p><strong>Notice the following</strong>:
+The array is modified in place.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to copy or move all files and folders from linux shell]]></title>
+            <link>/posts/linux</link>
+            <guid>/posts/linux</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-copy-all-thee-files-and-folders-from-a-directory-to-another-from-the-linux-shell">How to copy all thee files and folders from a directory to another from the linux shell</h2><p>First let’s create a 2 directories, each with files and directories inside them with the following set of bash commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">mkdir</span> dir1
+<span class="token function">mkdir</span> dir2
+<span class="token comment">#creating files inside each dir</span>
+<span class="token function">touch</span> dir1/y
+<span class="token function">touch</span> dir2/y
+<span class="token comment">#creating directories inside each dir</span>
+<span class="token function">mkdir</span> dir1/child_dir
+<span class="token function">mkdir</span> dir2/child_dir
+</code></pre><p><strong>Trying the straightforward</strong>:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> dir1 dir2
+</code></pre><p>will not work.</p><hr/><br/><p><strong>what you need to use is the flag -r which means recursively.</strong></p><p><em>to to copy all thee files and folders from a directory to another from the linux shell use the following:</em></p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">cp</span> -r dir1 dir2
+</code></pre>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to do git add commit and push in one command]]></title>
+            <link>/posts/linux_2</link>
+            <guid>/posts/linux_2</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-do-git-add-commit-and-push-in-one-command">how to do git add commit and push in one command?</h2><p>After putting your project in a remote repository, you find that you often want to push changes to that repository.
+You typically do it with these three commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> <span class="token function">add</span> --all
+<span class="token function">git</span> commit -m <span class="token string">"commit message"</span>
+<span class="token function">git</span> push -u origin master
+</code></pre><p>Notice that it’s alot of typing, is there a way to make it quicker?</p><p><strong> How to do git add commit and push in one command: </strong></p><ul><li>open the file “.gitconfig” in your home directory.</li><li>add the following to the file:</li></ul><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+    acp <span class="token operator">=</span> <span class="token string">"!l() { git add --all &amp;&amp; git commit -m <span class="token entity" title="\&quot;">\"</span>commit message<span class="token entity" title="\&quot;">\"</span> &amp;&amp; git push -u origin master; }; l"</span>
 
-driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path <span class="token operator">=</span> PATH_TO_CHROME_DRIVER<span class="token punctuation">)</span>
-</code></pre><p>and make sure to replace PATH_TO_CHROME_DRIVER with where your extracted chrome driver is.</p><p>After that you should see a Chrome window opened:</p><img src="/static/media/chrome_window.1361fb58.png"/><h2 id="conclusion">Conclusion</h2><p>We’ve setup the environment, by downloading the chromedriver and the selenium library.
-In the following posts We’ll start opening some sites and extracting data with python and selenium.</p>]]></content:encoded>
+</code></pre><p><strong>Before:</strong></p><img src="/static/media/before.21840404.png"/><p><strong>After:</strong></p><img src="/static/media/after.4d903531.png"/><h3 id="and-now-you-can-call-them-like-the-following">And now you can call them like the following:</h3><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">git</span> acp
+</code></pre><p><strong>Video Tutorial</strong>:</p><iframe width="560" height="315" src="https://www.youtube.com/embed/r-sGqQpUDlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[How to easily use ssh step by step]]></title>
+            <link>/posts/ssh</link>
+            <guid>/posts/ssh</guid>
+            <content:encoded><![CDATA[<h2 id="how-to-easily-use-ssh-step-by-step">How to easily use ssh step by step</h2><p>Recently in one of my projects, I had to run an <code>EC2</code> instance on <code>AWS</code>, and I needed to connect to it.</p><p><strong>After some research here’s how I did it on ubuntu:</strong></p><ul><li>create a file named “config” inside .ssh folder in your root directory.</li><li>fill it with the equivalent information about your host.</li></ul><img src="/static/media/ssh.5502d0f2.png"/><p>After that you can connect to it with the following commands:</p><pre><code class="language-bash" data-language="bash" data-highlighted-line-numbers=""><span class="token function">ssh</span> instagramproject
+</code></pre><p>and you should be connected.</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[New blog!]]></title>
+            <link>/posts/welcome</link>
+            <guid>/posts/welcome</guid>
+            <content:encoded><![CDATA[<h2 id="the-why">The why…</h2><p>It’s the start of a new year, and i have some knoweldge I wanna share!</p><p>You will find in this blog articles about Python, Linux, and Javascript.</p><p>I hope you and I learn something in the process.</p><p>Mostafa</p>]]></content:encoded>
         </item>
     </channel>
 </rss>

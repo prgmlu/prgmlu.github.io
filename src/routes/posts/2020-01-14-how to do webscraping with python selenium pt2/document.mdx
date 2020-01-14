@@ -1,0 +1,67 @@
+import dev_tools from './dev_tools.png'
+import instagram_login from './instagram_login.png'
+import login_button from './login_button.png'
+
+# How to do webscraping with python selenium pt2
+
+## Scraping is an easier form of programming:
+In normal programming tasks, you have an end goal you want to achieve and you build a logical flow 
+that would achieve that end goal.
+For example you have a button that you want to trigger some action when it's clicked, and you have to 
+thread your way through the language api, and use the language's constructs to make that happen.
+
+*In scraping however it's slightly easier.*
+
+A big part of scraping is targeting selectors, and this process if somewhat mechanical, and we'll encounter it
+as soon as we start web scraping.
+
+
+## Recap from last post:
+continuing from the last [post](http://prgmlu.github.io/posts/2020-01-13/how-to-do-webscraping-with-selenium-python)
+we setup the environment to be able to run [selenium with python binding](https://selenium-python.readthedocs.io/)
+
+this time we'll see how we can automate the process of logging into instagram with selenium.
+
+## Opening a page with selenium
+
+the following python lines opens the login page of instagram:
+
+```bash
+import selenium.webdriver as webdriver
+driver = webdriver.Chrome(executable_path = PATH_TO_YOUR_CHROMEDRIVER)
+driver.get('https://www.instagram.com/accounts/login/')
+```
+After running the previous commands, chromedriver should open the login page to instagram.
+
+ <img src={instagram_login}/> 
+
+## Targeting the selectors
+Next step is to target the username and password inputs to input the login info.
+how to go about that?
+
+We have to remember that everything we see on the page is an `HTML` Element.
+we can inspect the element we want to target by opening `Chrome Dev Tools` by Clicking F12.
+
+and this View should then open:
+ <img src={dev_tools}/> 
+
+**The previous window we just opened is very important, and you should get comfortable using it.**
+
+things we can do from this window is things like: copy the CSS selector, copy the xpath of the element and much more.
+
+Now to remind ourselves the end goal is to send our id and password from python to the input fields in the chromedriver.
+to achieve that with following code:
+
+```python
+import selenium.webdriver as webdriver
+driver = webdriver.Chrome(executable_path = PATH_TO_YOUR_CHROMEDRIVER)
+driver.get('https://www.instagram.com/accounts/login/')
+all_input_elements = driver.find_elements_by_css_selector('input')
+all_input_elements[0].send_keys('USERNAME')
+all_input_elements[1].send_keys('PASSWORD')
+```
+that's great progress so far! we've managed to control a browser through python, and we almost logged into instagram.
+what remains is clicking the highlighted button in the next image, and that's what we'll do in the next part of this series.
+ <img src={login_button}/> 
+
+*Stay Tuned...*

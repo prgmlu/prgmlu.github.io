@@ -6,7 +6,7 @@ import slugify from 'slugify'
 
 // Get a list of all posts, that will not be loaded until the user
 // requests them.
-const postModules = importAll.deferred('./**/post.js')
+const postModules = importAll.deferred('./*/post.js')
 const importPost = pathname => postModules[pathname]()
 const postPathnames = Object.keys(postModules)
 const datePattern = /^((\d{1,4})-(\d{1,4})-(\d{1,4}))[/-]/
@@ -62,11 +62,11 @@ let posts = postDetails.map(({ slug, pathname, date }, i) => ({
         slug,
         previousDetails: previousPost && {
           title: previousPost.title,
-          href: join(context.blogRoot, 'posts', previousSlug),
+          href: join(context.blogRoot, 'posts', previousSlug.split('/')[1]),
         },
         nextDetails: nextPost && {
           title: nextPost.title,
-          href: join(context.blogRoot, 'posts', nextSlug),
+          href: join(context.blogRoot, 'posts', nextSlug.split('/')[1]),
         },
         ...meta,
       }),
