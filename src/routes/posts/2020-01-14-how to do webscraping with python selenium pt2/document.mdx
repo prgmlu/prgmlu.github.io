@@ -33,7 +33,7 @@ driver.get('https://www.instagram.com/accounts/login/')
 ```
 After running the previous commands, chromedriver should open the login page to instagram.
 
- <img src={instagram_login}/> 
+ <img style={{"maxWidth":"100%"}} src={instagram_login}/> 
 
 ## Targeting the selectors
 Next step is to target the username and password inputs to input the login info.
@@ -43,7 +43,7 @@ We have to remember that everything we see on the page is an `HTML` Element.
 we can inspect the element we want to target by opening `Chrome Dev Tools` by Clicking F12.
 
 and this View should then open:
- <img src={dev_tools}/> 
+ <img style={{"maxWidth":"100%"}} src={dev_tools}/> 
 
 **The previous window we just opened is very important, and you should get comfortable using it.**
 
@@ -62,6 +62,6 @@ all_input_elements[1].send_keys('PASSWORD')
 ```
 that's great progress so far! we've managed to control a browser through python, and we almost logged into instagram.
 what remains is clicking the highlighted button in the next image, and that's what we'll do in the next part of this series.
- <img src={login_button}/> 
+ <img style={{"maxWidth":"100%"}} src={login_button}/> 
 
 *Stay Tuned...*

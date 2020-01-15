@@ -19,7 +19,7 @@ os.mkdir('empty_dir')
 os.remove('empty_dir')
 ```
 It gives an error this time.
- <img src={error}/> 
+ <img style={{"maxWidth":"100%"}} src={error}/> 
 
 we'll need another module for this task.
 we'll use the shutil module.
@@ -30,7 +30,7 @@ shutil.rmtree('empty_dir')
 ```
 
 This time it works, and no error.
-<img src={noerror} />
+<img style={{"maxWidth":"100%"}} src={noerror} />
 
 It even works with non-empty directories:
 ```python
