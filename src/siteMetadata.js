@@ -7,5 +7,5 @@ export default {
   description: "Short blogs about Python, Linux, Javascript.",
 
   // The number of posts to a page on the site index.
-  indexPageSize: 10,
+  indexPageSize: 5,
 }

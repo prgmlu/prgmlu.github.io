@@ -10,15 +10,20 @@ const postModules = importAll.deferred('./*/post.js')
 const importPost = pathname => postModules[pathname]()
 const postPathnames = Object.keys(postModules)
 const datePattern = /^((\d{1,4})-(\d{1,4})-(\d{1,4}))[/-]/
+let date;
 
 let postDetails = postPathnames.map(pathname => {
   let slug = slugify(
+    //the $ in the replacement string points to the group
     pathname.replace(/post.jsx?$/, '').replace(/(\d)\/(\d)/, '$1-$2'),
   )
+    //remove starting or trailing '.' or '-'
     .replace(/^[-.]+|[.-]+$/g, '')
+    //append a slash after the date
     .replace(datePattern, '$1/')
+    // .split('/')[1]
 
-  let date
+
   let dateMatch = slug.match(datePattern)
   if (dateMatch) {
     date = new Date(dateMatch[2], parseInt(dateMatch[3]) - 1, dateMatch[4])
@@ -45,13 +50,13 @@ let posts = postDetails.map(({ slug, pathname, date }, i) => ({
     if (i !== 0) {
       let previousPostDetails = postDetails[i - 1]
       previousPost = (await importPost(previousPostDetails.pathname)).default
-      previousSlug = previousPostDetails.slug
+      previousSlug = previousPostDetails.slug.split('/')[1]
     }
 
     if (i + 1 < postDetails.length) {
       let nextPostDetails = postDetails[i + 1]
       nextPost = (await importPost(nextPostDetails.pathname)).default
-      nextSlug = nextPostDetails.slug
+      nextSlug = nextPostDetails.slug.split('/')[1]
     }
 
     return Navi.route({
@@ -62,11 +67,11 @@ let posts = postDetails.map(({ slug, pathname, date }, i) => ({
         slug,
         previousDetails: previousPost && {
           title: previousPost.title,
-          href: join(context.blogRoot, 'posts', previousSlug.split('/')[1]),
+          href: join(context.blogRoot,  previousSlug),
         },
         nextDetails: nextPost && {
           title: nextPost.title,
-          href: join(context.blogRoot, 'posts', nextSlug.split('/')[1]),
+          href: join(context.blogRoot,  nextSlug),
         },
         ...meta,
       }),
