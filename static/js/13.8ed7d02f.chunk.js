@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{82:function(l,e,n){"use strict";n.r(e),e.default={title:"How to copy or move all files and folders from linux shell",tags:["linux","shell"],spoiler:"copy all files with a simple command.",getContent:function(){return n.e(24).then(n.bind(null,55))}}}}]);
+//# sourceMappingURL=13.8ed7d02f.chunk.js.map

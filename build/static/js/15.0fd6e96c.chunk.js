@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{79:function(n,t,i){"use strict";i.r(t),t.default={title:"How to do git add commit and push in one command",tags:["linux","shell","git"],spoiler:"using .gitconfig file.",getContent:function(){return i.e(6).then(i.bind(null,59))}}}}]);
-//# sourceMappingURL=15.0fd6e96c.chunk.js.map

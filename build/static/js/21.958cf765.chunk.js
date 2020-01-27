@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[21],{90:function(n,t,e){"use strict";e.r(t),t.default={title:"How to make a python __init__ file",tags:["python","__init__"],spoiler:"using python module system",getContent:function(){return e.e(3).then(e.bind(null,73))}}}}]);
+//# sourceMappingURL=21.958cf765.chunk.js.map
